@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181818"
+    android:fitsSystemWindows="true"
+    android:paddingTop="@dimen/_15sdp"
+    tools:context=".activity.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/app_icon"
+            android:contentDescription="@string/img"
+            android:layout_marginTop="@dimen/_40sdp"/>
+
+        <TextView
+            android:id="@+id/tvYunotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yu_notes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:fontFamily="@font/pacifico_regular"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="12"
+                android:background="@drawable/back_email_password"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/poppins_light"
+                android:hint="@string/hint_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            app:startIconDrawable="@drawable/ic_account">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="12"
+                android:background="@drawable/back_email_password"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/poppins_light"
+                android:hint="@string/hint_email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            app:startIconDrawable="@drawable/ic_key"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorQuickActionsBackground">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="12"
+                android:textColor="@color/colorPrimary"
+                android:hint="@string/hint_password"
+                android:fontFamily="@font/poppins_light"
+                android:background="@drawable/back_email_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorQuickActionsBackground"
+            app:startIconDrawable="@drawable/ic_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietConfirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/back_email_password"
+                android:ems="12"
+                android:fontFamily="@font/poppins_light"
+                android:hint="@string/hint_confirmPassword"
+                android:textColor="@color/colorPrimary"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_register"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/back_button_login_register"
+            app:backgroundTint="#24252A"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_KetLogin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_medium"/>
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_login"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

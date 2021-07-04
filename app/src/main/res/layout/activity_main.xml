@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181818"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/app_icon"
+        android:contentDescription="@string/img"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tvYunotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yu_notes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30ssp"
+        android:fontFamily="@font/pacifico_regular"
+        android:layout_marginTop="@dimen/_75sdp"
+        android:layout_centerInParent="true"
+        android:layout_alignTop="@id/imageIcon"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        app:startIconDrawable="@drawable/ic_account"
+        android:layout_alignTop="@id/tvYunotes"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="14"
+            android:background="@drawable/back_email_password"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_light"
+            android:hint="@string/hint_email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_65sdp"
+        app:startIconDrawable="@drawable/ic_key"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorQuickActionsBackground"
+        android:layout_alignTop="@id/textInputLayoutEmail"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="14"
+            android:textColor="@color/colorPrimary"
+            android:hint="@string/hint_password"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_light"
+            android:background="@drawable/back_email_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_login"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/_7sdp"
+        android:ems="5"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_gravity="center"
+        android:layout_alignTop="@id/textInputLayoutPassword"
+        android:layout_centerInParent="true"
+        android:background="@drawable/back_button_login_register"
+        app:backgroundTint="#24252A"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:orientation="horizontal"
+        android:layout_alignTop="@id/btnLogin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_KetRegister"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"/>
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_CreateAccount"
+            android:textColor="@color/purple_200"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_Copyright"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_light"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
