@@ -18,13 +18,21 @@ public class StartScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
 
+        //Membuat object event handler
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
+                //Method untuk memanggil activity "MainActivity"
                 Intent intent = new Intent(StartScreen.this, MainActivity.class);
+
+                //Fungsi untuk memulai intent
                 startActivity(intent);
+
+                //Fungsi selesai
                 finish();
             }
+            //Memanggil variabel
         }, startScreen);
     }
 }
